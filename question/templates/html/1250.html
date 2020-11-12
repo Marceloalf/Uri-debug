@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <title>Kiloman</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/ad-hoc.css' %}">
+    </head>
+
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Uri Debug</a></h1>
+        </div>
+        <div class="subtitle">
+            <h5>ad-hoc</h5>
+        </div>
+        
+        
+        <div class="info">
+            <h1>Kiloman</h1>
+                
+            <p>
+                Você chegou a um dos últimos chefões no novo jogo de ação 2-D de deslocamento lateral, KiloMan. 
+                O chefão tem uma arma grande que pode atirar projéteis em várias alturas. Para cada tiro, 
+                KiloMan pode ficar parado ou pular. Se ele ficar parado e o tiro estiver na altura 1 ou 2, 
+                ele será atingido. Se ele pular e o tiro estiver a uma altura maior que 2, então ele também 
+                será atingido. Caso contrário, ele não é atingido. Dada a altura de cada tiro e a sequência de 
+                pulos, quantas vezes KiloMan será atingido?</br></br>
+                <strong>Entrada</strong></br>
+                A entrada contém vários casos de teste. A primeira linha da entrada contém um inteiro N que 
+                indica o número de casos de teste. Cada caso de teste é composto por 3 linhas. A primeira 
+                linha contém um inteiro T (1 ≤ T ≤ 50) que indica o número de tiros. A segunda linha contém T 
+                inteiros, que representam a sequência das alturas às quais os tiros estão sendo disparados. 
+                Cada elemento da sequência será entre 1 e 7, inclusive. A terceira linha da entrada contém 
+                a string "pulos", que representa a sequência de pulos que KiloMan tentará; 'J' significa que
+                ele irá pular e 'S' significa que ele ficará parado. Por exemplo, se o primeiro número da 
+                sequência de tiros for 3 e o primeiro caractere de "pulos" for 'J', então KiloMan pulará assim 
+                que o chefão atirar a uma altura 3 (e, portanto, ele será atingido).</br></br>
+                <strong>Saída</strong></br>
+                Para cada caso, seu programa deve imprimir um inteiro representando o número de vezes que 
+                KiloMan é atingido.</br>
+            </p>
+        </div>
+            
+        <div class="input">
+            <form method="POST">
+                {% csrf_token %}
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" id="input" name="textarea"></textarea>
+                </br>
+                <button name='submit' class="btn btn-primary">Output</button>
+            </form>
+        </div>
+
+        <div class="output">
+            {%for i in text%}
+            <p>{{i}}</p>
+            {%endfor%}
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+</html>

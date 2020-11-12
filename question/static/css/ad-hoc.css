@@ -1,0 +1,67 @@
+.page-header {
+    background-color: #0c6900;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    text-align: left;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.subtitle{
+    background-color: #0c6900be;
+    margin-top: 0;
+    padding: 8px 20px 5px 40px;
+    text-align: left;
+}
+
+.subtitle h5{
+    color: #ffffff;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+.container{
+    float: center;
+}
+
+.info{
+    padding:10px 80px 0% 80px;
+    width: 40%;
+    float: left;
+    text-align: center;
+}
+
+.info p{
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 10pt;
+}
+
+.input{
+    padding:20px 30px 0% 10px;
+    width: 30%;
+    float: left;
+}
+
+.output{
+    float: left;
+    width: 20%;
+    border: solid;
+    text-align: center;
+    margin-top: 20px;
+    padding:20px 30px 0% 10px;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.205);
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-size: small;
+}

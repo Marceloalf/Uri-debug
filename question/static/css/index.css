@@ -1,0 +1,26 @@
+.page-header {
+    background-color: #e46e00;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.card{
+    margin: 1%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body{
+    text-align: center;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.205);
+}

@@ -14,7 +14,7 @@ def home(request):
     q_uri = [(1250, '1250 - Kiloman'),
              (1401, '1401 - permutações'),]
 
-    return render(request, "Questions/index.html", {'text': q_uri})
+    return render(request, "html/index.html", {'text': q_uri})
 
 def questoes(request, question_id):
     input_q = []
@@ -23,7 +23,7 @@ def questoes(request, question_id):
     if request.POST:
         input_q = function(forms(request))
 
-    return render(request, "Questions/{}.html".format(question_id), {"text":input_q})
+    return render(request, "html/{}.html".format(question_id), {"text":input_q})
 
 def forms(request):
     form  = request.POST["textarea"].split("\n")
