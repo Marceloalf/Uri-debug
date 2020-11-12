@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kiloman</title>
+    </head>
+
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+            <textarea id="input" name="textarea"></textarea>
+            </br>
+            <button name='submit' class="btn btn-primary">Output</button>
+        </form>
+
+        {%for i in text%}
+        <p>{{i}}</p>
+        {%endfor%}
+    </body>
+</html>
