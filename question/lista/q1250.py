@@ -20,19 +20,22 @@ class KiloMan:
         return lv >= 3 and act == "J"
 
 
-def main():
-    count = int(input())
 
-    i = 0
-    while i < count:
-        amount = int(input())
-        level = list(map(int, input().split()))
-        actions = [action for action in input()]
+def input_q1250(formulario):
+    output = []
+    count = formulario[0]   # numero de interações
+    formulario.remove(count)
 
+    # O laço será executado pelo número de interações
+    for i in range(0, len(formulario), 3):
+            
+        # Variaveis para o calculo
+        amount = int(formulario[i])
+        level = list(map(int, formulario[i + 1].split()))
+        actions = [action for action in formulario[i + 2]]
+
+        # Chamada das funções
         Hero = KiloMan(level, actions)
-        print(Hero.damage_amount(amount))
-        i += 1
-
-
-if __name__ == "__main__":
-    main()
+        output.append(Hero.damage_amount(amount))
+    
+    return output

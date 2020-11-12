@@ -17,15 +17,15 @@ def permute(vector):
     return words
 
 
-def main():
-    n = int(input())
+def input_1401(formulario):
+    n = formulario[0]
+    formulario.remove(n)
 
-    for i in range(n):
-        data = input()
+    perms = []
+    for i in range(int(n)):
+        data = formulario[i]
         for word in sort_permutations(data):
-            print(word)
-        print()
-
-
-if __name__ == "__main__":
-    main()
+            perms.append(word)
+        perms.append('---')
+    
+    return perms
