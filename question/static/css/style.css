@@ -1,0 +1,84 @@
+.gradient{
+    background: #c0392b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#1565C0, #c0392b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0,#c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top: 0px;
+    text-align: left;
+}
+
+.page-header {
+    width: 100%;
+    position: sticky;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.subtitle{
+    background: linear-gradient(to right, #1565C0,#e74c3c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 8px 20px 5px 40px;
+}
+
+.subtitle h5{
+    color: #ffffff;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > div{
+    flex: 1;
+}
+
+.info{
+    margin-top: 20px;
+    padding:10px 80px 0% 10px;
+    text-align: center;
+}
+
+.info h6{
+    text-align: left;
+}
+
+.info p{
+    text-align: justify;
+    font-size: 10pt;
+}
+
+.input{
+    padding:20px 30px 0% 10px;
+}
+
+.output{
+    overflow: auto;
+    
+    height: 374px;
+
+    text-align: center;
+    padding: 20px 30px 0% 10px;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    color: blanchedalmond;
+}
+
+.output-wrapper{
+    margin-top: 20px;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.205);
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-size: small;
+}

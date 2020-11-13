@@ -8,7 +8,7 @@ def add_coordinates(matrix, x, y):
     return matrix[x][y]
 
 
-def main():
+def main(formulario):
     matrix = create_matrix(500, 500)
     verification = 0
 
