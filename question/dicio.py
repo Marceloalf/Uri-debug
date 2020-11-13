@@ -16,4 +16,10 @@ DESCRIPTION = {
         ("Entrada", ['''A entrada contém vários casos de teste. Cada caso de teste é composto por uma palavra de 2 até 100 caracteres e sem espaços. A entrada termina com EOF (fim de arquivo).''']),
         ("Saída", ['''Para cada caso de teste, imprima a palavra recebida em forma de um triângulo e lembre-se de deixar um espaço em branco entre cada letra, mas não deixe espaço em branco após a última letra de cada linha. Imprima uma linha em branco após cada caso de teste, inclusive após o último.'''])
         ],
+
+    2974:[
+        ("Descrição", ['''Em um porão escuro, há uma caixa de madeira com soluções impressas para todas as tarefas deste concurso. No entanto, o porão tem paredes grossas e uma porta, e uma fechadura na porta. Na fechadura existem n barras de ferro horizontais e em cada uma das barras há uma palavra com letras de igual largura. Cada barra pode ser movida independentemente para a esquerda ou direita para uma ou mais larguras de uma letra. Há pelo menos uma letra que é comum a todas as palavras. Portanto, as barras podem ser alinhadas de modo que haja uma linha vertical de n letras idênticas acima uma da outra (cada letra em uma barra). Para destrancar a porta, as barras devem ser posicionadas de tal forma que haja um número máximo de linhas verticais consecutivas.''','''Você está naturalmente interessado em escrever um programa que resolva esse problema.''']),
+        ("Entrada", ['''A primeira linha contém um inteiro n, o número de barras, com n <= 1000. Em cada uma das próximas n linhas, há uma palavra correspondente a uma das barras. As palavras contém somente letras maiúsculas, e possuem no mínimo 1 e no máximo 100 caracteres.''']),
+        ("Saída", ['''Uma string de comprimento máximo, que aparece em cada palavra como uma sequência de letras consecutivas. Se houver mais de uma solução, você deverá imprimir a mais à esquerda.'''])
+        ],
 }

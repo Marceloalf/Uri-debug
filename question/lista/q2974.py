@@ -11,13 +11,11 @@ def comparison(model, vector):
     return higher
 
 
-def main():
-    size = int(input())
-    model = input()
-    phrase = [input() for i in range(size-1)]
+def input_q2974(forms):
+    forms.remove(forms[0])
+    model = forms[0]
+    forms.remove(forms[0])
+
+    phrase = [word for word in forms]
     
-    print(comparison(model, phrase))
-
-
-if __name__ == "__main__":
-    main()
+    return comparison(model, phrase)

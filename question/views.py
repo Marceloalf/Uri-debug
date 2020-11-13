@@ -5,18 +5,21 @@ from .dicio import DESCRIPTION
 from .lista.q1250 import input_q1250
 from .lista.q1401 import input_q1401
 from .lista.q2484 import input_q2484
+from .lista.q2974 import input_q2974
 
 # lista de questões
 QUESTION = {
     1401: input_q1401,
     1250: input_q1250,
     2484: input_q2484,
+    2974: input_q2974,
 }
 
 #l Lista com os nomes
 Q_URI = [(1250, "1250 - Kiloman"),
         (1401, "1401 - Permutações"),
-        (2484, "2484 - Abracadabra"),]
+        (2484, "2484 - Abracadabra"),
+        (2974, "2974 - Fechadura"),]
 
 # Pagina inicial
 def home(request):
