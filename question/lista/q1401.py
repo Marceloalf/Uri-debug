@@ -17,7 +17,7 @@ def permute(vector):
     return words
 
 
-def input_1401(formulario):
+def input_q1401(formulario):
     n = formulario[0]
     formulario.remove(n)
 
@@ -26,6 +26,5 @@ def input_1401(formulario):
         data = formulario[i]
         for word in sort_permutations(data):
             perms.append(word)
-        perms.append('---')
-    
-    return perms
+        perms.append('')
+    return '\n'.join(perms)

@@ -12,23 +12,19 @@ def remove_last(number, word):
 
 def word_pyramid(word):
     count = 0
+    pyramid = []
     while len(word) >= 1:
-        print(outer_spaces(count, word))
+        pyramid.append(outer_spaces(count, word))
         word = remove_last(2, word)
         count += 1
+    return '\n'.join(pyramid)
 
 
-def main():
-    word = list(input())
-    word = inner_spaces(word)
+def input_q2484(form):
 
-    word_pyramid(word)
-    print()
-
-
-if __name__ == '__main__':
-    while True:
-        try:
-            main()
-        except EOFError:
-            break
+    palavras = []
+    for i in form:
+        word = inner_spaces(i)
+        palavras.append(word_pyramid(word))
+        palavras.append('\n\n')
+    return ''.join(palavras)

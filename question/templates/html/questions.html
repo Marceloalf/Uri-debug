@@ -13,17 +13,22 @@
             <h1><a href="/">Uri Debug</a></h1>
         </div>
         <div class="subtitle gradient">
-            <h5>Estruturas e bibliotecas</h5>
+            <h5>{{title}}</h5>
         </div>
         
         <div class="container">
             <div class="info">
-                <h2>{{title}}</h2>
                 {%for type, text in description%}
-                <h6>{{type}}:</h6>
-                <p>{{text}}</p>
+                    <h6>{{type}}:</h6>
+                    {%for word in text%}
+                        {%if word|stringformat:"s" == "<img>"%}
+                            <img load="lazy" width="50%" src="C:\Users\raulf\Django projects\Inicial\question\templates\html\{{title}}.jpg">
+                        {%else%}
+                            <p>{{word | linebreaksbr}}</p>
+                        {%endif%}                   
+                    {%endfor%}
                 {%endfor%}
-                
+
             </div>
             
             <div class="input">
@@ -39,9 +44,7 @@
             <div class="output-wrapper">
                 <h5>Output</h5>
                 <div class="output">
-                    {%for i in text%}
-                    <p>{{i}}</p>
-                    {%endfor%}
+                    <p>{{text | linebreaksbr}}</p>
                 </div>
             </div>
         </div>

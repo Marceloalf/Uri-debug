@@ -17,10 +17,12 @@
     margin: 1%;
 }
 
-.container{
+.size{
     height: calc(100% - 80px);
     width: 100%;
+}
 
+.container{
     display: flex;
     
     justify-content: center;
@@ -32,8 +34,6 @@
 }
 
 body{
-    height: calc(100% - 80px);
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.205);
 }
 
