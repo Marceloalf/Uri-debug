@@ -22,10 +22,10 @@
                     <h6>{{type}}:</h6>
                     {%for word in text%}
                         {%if word|stringformat:"s" == "<img>"%}
-                            <img load="lazy" width="50%" src="https://resources.urionlinejudge.com.br/gallery/images/contests/UOJ_231_A.jpg">
+                            <img load="lazy" width="50%" src="{% static 'img/' %}{{title}}.jpg" >
                         {%else%}
                             <p>{{word | linebreaksbr}}</p>
-                        {%endif%}                   
+                        {%endif%}
                     {%endfor%}
                 {%endfor%}
 

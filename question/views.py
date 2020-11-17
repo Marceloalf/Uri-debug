@@ -6,6 +6,9 @@ from .lista.q1250 import input_q1250
 from .lista.q1401 import input_q1401
 from .lista.q2484 import input_q2484
 from .lista.q2974 import input_q2974
+from .lista.q2544 import input_q2544
+from .lista.q2693 import input_q2693
+from .lista.q2496 import input_q2496
 
 # lista de questões
 QUESTION = {
@@ -13,13 +16,20 @@ QUESTION = {
     1250: input_q1250,
     2484: input_q2484,
     2974: input_q2974,
+    2544: input_q2544,
+    2693: input_q2693,
+    2496: input_q2496,
 }
 
 #l Lista com os nomes
 Q_URI = [(1250, "1250 - Kiloman"),
         (1401, "1401 - Permutações"),
         (2484, "2484 - Abracadabra"),
-        (2974, "2974 - Fechadura"),]
+        (2496, "2496 - Única chance"),
+        (2544, "2544 - Kagebushin"),
+        (2693, "2693 - Van"),
+        (2974, "2974 - Fechadura"),
+        ]
 
 # Pagina inicial
 def home(request):
@@ -44,7 +54,7 @@ def questoes(request, question_id):
     title = search_by_id(question_id)
 
     #tupla enviada pro site
-    context = {"text": input_q, "description":desc, 'title': title}
+    context = {"input": input_q, "description":desc, 'title': title}
 
     if request.POST:
         input_q = function(forms(request))
