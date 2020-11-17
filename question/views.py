@@ -46,9 +46,6 @@ Q_URI = [(1250, "1250 - Kiloman"),
         (2161, "2161 - Raiz quadrada"),
         ]
 
-# Pagina inicial
-def home(request):
-    return render(request, "html/index.html", {"text": Q_URI})
 
 # Função para procurar o nome da questão. Caso não tenha, retorna string vazia
 def search_by_id(id):
@@ -59,23 +56,34 @@ def search_by_id(id):
             return name
     return ''
 
-def questoes(request, question_id):
-    # Função correspondente à requestão
-    function = QUESTION[question_id]
+# Pagina inicial
+def home(request):
+    return render(request, "html/index.html", {"text": Q_URI})
 
+def question_page(request, question_id):
     # Variáveis a serem renderizadas no site  
     input_q = ''
     desc = DESCRIPTION[question_id]
+    function = QUESTION[question_id]
     title = search_by_id(question_id)
 
     #tupla enviada pro site
     context = {"input": input_q, "description":desc, 'title': title}
 
+    #Pegando o formulário
     if request.POST:
         input_q = function(forms(request))
         context["text"] = input_q
     return render(request, "html/questions.html", context)
 
+# Tratamento caso não tenha a questão
+def scripts(request, question_id):
+    try:
+        return question_page(request, question_id)
+    except KeyError:
+        return HttpResponse("Número de questão invalido")
+
+# Tratando o formulário
 def forms(request):
     form  = request.POST["textarea"].split("\n")
     form = list(map(str.strip, form))
