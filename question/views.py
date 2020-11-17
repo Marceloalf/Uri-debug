@@ -12,6 +12,8 @@ from .lista.q2496 import input_q2496
 from .lista.q2460 import input_q2460
 from .lista.q2343 import input_q2343
 from .lista.q2310 import input_q2310
+from .lista.q2162 import input_q2162
+from .lista.q2161 import input_q2161
 
 # lista de questões
 QUESTION = {
@@ -25,6 +27,8 @@ QUESTION = {
     2460: input_q2460,
     2343: input_q2343,
     2310: input_q2310,
+    2162: input_q2162,
+    2161: input_q2161,
 }
 
 #l Lista com os nomes
@@ -38,6 +42,8 @@ Q_URI = [(1250, "1250 - Kiloman"),
         (2460, "2460 - Fila"),
         (2343, "2343 - Caçadores de Mito"),
         (2310, "2310 - Voleibol"),
+        (2162, "2162 - Picos e vales"),
+        (2161, "2161 - Raiz quadrada"),
         ]
 
 # Pagina inicial

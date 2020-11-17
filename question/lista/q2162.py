@@ -17,12 +17,8 @@ def verify_hills(hills, n):
     return verification
 
 
-def main():
-    n = int(input())
-    hills = list(map(int, input().split()))
+def input_q2162(forms):
+    n = int(forms[0])
+    hills = list(map(int, forms[1].split()))
 
-    print(verify_hills(hills, n))
-
-
-if __name__ == '__main__':
-    main()
+    return verify_hills(hills, n)
