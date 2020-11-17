@@ -16,7 +16,7 @@
 .card{
     margin: 1%;
     min-width: 200px;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 .size{
@@ -25,9 +25,13 @@
 }
 
 .container{
-    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+
     justify-content: center;
     align-items: center;
+
+    overflow: auto;
 }
 
 .card-body{

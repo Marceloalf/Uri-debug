@@ -10,14 +10,8 @@ class Fila:
         return " ".join(self.ids)
 
 
-def main():
-    int(input())
-    soccer = Fila(input().split())
+def input_q2460(forms):
+    soccer = Fila(forms[1].split())
+    soccer.remnants(forms[3].split())
     
-    int(input())
-    soccer.remnants(input().split())
-    
-    print(soccer)
-    
-if __name__ == "__main__":
-    main()
+    return soccer

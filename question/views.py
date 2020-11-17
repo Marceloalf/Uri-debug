@@ -9,6 +9,9 @@ from .lista.q2974 import input_q2974
 from .lista.q2544 import input_q2544
 from .lista.q2693 import input_q2693
 from .lista.q2496 import input_q2496
+from .lista.q2460 import input_q2460
+from .lista.q2343 import input_q2343
+from .lista.q2310 import input_q2310
 
 # lista de questões
 QUESTION = {
@@ -19,6 +22,9 @@ QUESTION = {
     2544: input_q2544,
     2693: input_q2693,
     2496: input_q2496,
+    2460: input_q2460,
+    2343: input_q2343,
+    2310: input_q2310,
 }
 
 #l Lista com os nomes
@@ -29,6 +35,9 @@ Q_URI = [(1250, "1250 - Kiloman"),
         (2544, "2544 - Kagebushin"),
         (2693, "2693 - Van"),
         (2974, "2974 - Fechadura"),
+        (2460, "2460 - Fila"),
+        (2343, "2343 - Caçadores de Mito"),
+        (2310, "2310 - Voleibol"),
         ]
 
 # Pagina inicial

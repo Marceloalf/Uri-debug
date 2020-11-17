@@ -8,17 +8,16 @@ def add_coordinates(matrix, x, y):
     return matrix[x][y]
 
 
-def main(formulario):
+def input_q2343(forms):
     matrix = create_matrix(500, 500)
     verification = 0
 
-    for i in range(int(input())):
-        x, y = map(int, input().split())
+    Q = int(forms[0])
+    forms.remove(forms[0])
+
+    for i in range(Q):
+        x, y = map(int, forms[i].split())
         if add_coordinates(matrix, x, y) > 1:
             verification = 1
 
-    print(verification)
-
-
-if __name__ == '__main__':
-    main()
+    return verification
